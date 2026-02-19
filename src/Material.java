@@ -9,7 +9,7 @@ public abstract class Material{
     public String getTitulo() {
         return titulo;
     }
-    public boolean getDisponivel(){
+    public boolean isDisponivel(){
         return disponivel;
     }
     public Material(String id, String titulo) {
