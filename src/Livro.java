@@ -1,6 +1,6 @@
 public class Livro extends Material{
 
-    public Livro(String id, String titulo, int prazo){
+    public Livro(String id, String titulo){
         super(id, titulo);
     }
 
