@@ -1,7 +1,7 @@
 public class Revista extends Material {
 
-    public Revista(String id, String titulo){
-        super(id, titulo);
+    public Revista(String id, String titulo, int quantidade){
+        super(id, titulo, quantidade);
     }
     
     @Override

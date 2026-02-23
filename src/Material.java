@@ -14,7 +14,12 @@ public abstract class Material{
     }
 
     public Material(String id, String titulo, int quantidade) {
-        this.titulo = titulo; this.id = id; this.quantidade = quantidade;
+        if (quantidade < 0) {
+            throw new IllegalArgumentException("Quantidade não pode ser negativa.");
+        }
+        this.id = id;
+        this.titulo = titulo;
+        this.quantidade = quantidade;
     }
 
     public boolean emprestar(){
