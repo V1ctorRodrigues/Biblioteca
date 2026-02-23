@@ -1,7 +1,7 @@
 public abstract class Material{
     private String id;
     private String titulo;
-    private boolean disponivel = true;
+    private int quantidade;
 
     public String getId() {
         return id;
@@ -9,25 +9,27 @@ public abstract class Material{
     public String getTitulo() {
         return titulo;
     }
-    public boolean isDisponivel(){
-        return disponivel;
+    public int getQuantidade(){
+        return quantidade;
     }
-    public Material(String id, String titulo) {
-        this.titulo = titulo;
-        this.id = id;
+
+    public Material(String id, String titulo, int quantidade) {
+        this.titulo = titulo; this.id = id; this.quantidade = quantidade;
     }
+
     public boolean emprestar(){
-        if(disponivel){
-            disponivel = false;
+        if(quantidade<=0){
+            return false;
+        }else{
+            quantidade--;
             return true;
         }
-            return false;
     }
+
     public boolean devolver(){
-        if(!disponivel){
-            disponivel = true;
-            return true;
-        }
-            return false;
+        quantidade++;
+        return true;
     }
+  
+    public abstract int getPrazoEmDias();
 }
