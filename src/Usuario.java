@@ -9,8 +9,5 @@ public class Usuario {
     }
     public Usuario(String id, String nome){
         this.id=id; this.nome=nome;
-    }
-
-    
-    
+    }  
 }
